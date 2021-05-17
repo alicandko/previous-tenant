@@ -6,7 +6,7 @@ interface Props {
   className?: string;
 }
 
-export const TenantDetailsPage: React.FC<Props> = ({ className }) => (
+export const RentFormPage: React.FC<Props> = ({ className }) => (
   <Grid
     xs={12}
     container

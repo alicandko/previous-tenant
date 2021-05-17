@@ -4,12 +4,14 @@ import { Grid } from '@material-ui/core';
 import { Route, Router, Switch } from 'react-router';
 import { createBrowserHistory } from 'history';
 
-import { TenantDetailsPage } from './TenantDetailsPage/TenantDetailsPage';
+import { RentFormPage } from './RentFormPage/RentFormPage';
+import { RentTablePage } from './RentTablePage/RentTablePage';
 
 interface PageContainerProps {
   className?: string;
   children?: ReactNode;
 }
+
 const PageContainer = styled((props: PageContainerProps) => (
   <Grid container className={props.className}>
     {props.children}
@@ -24,13 +26,18 @@ const history = createBrowserHistory();
 export const App: React.FC = () => (
   <Router history={history}>
     <Switch>
-      <Route exact path="/rent-list">
-        <PageContainer>aaaa</PageContainer>
+      <Route exact path="/rent-table">
+        <PageContainer>
+          <RentTablePage />
+        </PageContainer>
       </Route>
       <Route exact path="/rent-form">
         <PageContainer>
-          <TenantDetailsPage />
+          <RentFormPage />
         </PageContainer>
+      </Route>
+      <Route>
+        <PageContainer>404</PageContainer>
       </Route>
     </Switch>
   </Router>

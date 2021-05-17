@@ -12,7 +12,6 @@ const GlobalStyle = createGlobalStyle`
 	
 	html, body {
 		font-family: "Roboto";
-		font-size: 15px;
 		background-color: #e7e7ec;
 		width: 100%;
 		min-height: 100%;

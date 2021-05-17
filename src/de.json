@@ -1,0 +1,14 @@
+{
+  "streetAndHouseNumber": "Straße und Hausnummer",
+  "city": "Stadt",
+  "postalCode": "Postleitzahl",
+  "coldRent": "Kaltmiete",
+  "warmRent": "Warmmiete",
+  "flatRent": "Pauschalmiete",
+  "email": "E-Mail-Adresse",
+  "phoneNumber": "Telefonnummer",
+  "commencementOfContract": "Vertragsbeginn",
+  "address": "Addresse",
+  "contractDetails": "Angaben zum Vertrag",
+  "contact": "Kontakt"
+}

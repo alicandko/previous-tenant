@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Grid, TextField } from '@material-ui/core';
 import { useForm } from 'react-hook-form';
 
+import text from '../de.json';
+
 const FormSC = styled.form`
   width: 500px;
   padding: 30px 30px 30px 30px;
@@ -30,40 +32,43 @@ export const Form: React.FC = () => {
       <H1>Miethöhe posten</H1>
       <Grid xs={12} container direction="column" justify="center" alignItems="center" spacing={3}>
         <Grid container item>
-          <H2>Addresse</H2>
+          <H2>{text.address}</H2>
         </Grid>
         <Grid container item>
-          <TextField label="Straße und Hausnummer" fullWidth variant="outlined" />
+          <TextField label={text.streetAndHouseNumber} fullWidth variant="outlined" />
         </Grid>
         <Grid container item>
-          <TextField label="Stadt" fullWidth variant="outlined" />
+          <TextField label={text.city} fullWidth variant="outlined" />
         </Grid>
         <Grid container item>
-          <TextField label="Postleitzahl" fullWidth variant="outlined" />
+          <TextField label={text.postalCode} fullWidth variant="outlined" />
         </Grid>
         <Grid container item>
-          <H2>Miete</H2>
+          <H2>{text.contractDetails}</H2>
         </Grid>
         <Grid container item>
-          <TextField label="Kaltmiete" fullWidth variant="outlined" />
+          <TextField label={text.commencementOfContract} fullWidth variant="outlined" />
         </Grid>
         <Grid container item>
-          <TextField label="Warmmiete" fullWidth variant="outlined" />
+          <TextField label={text.coldRent} fullWidth variant="outlined" />
+        </Grid>
+        <Grid container item>
+          <TextField label={text.warmRent} fullWidth variant="outlined" />
         </Grid>
         <Grid container item justify="center">
           ODER
         </Grid>
         <Grid container item>
-          <TextField label="Pauschalmiete" fullWidth variant="outlined" />
+          <TextField label={text.flatRent} fullWidth variant="outlined" />
         </Grid>
         <Grid container item>
-          <H2>Kontakt</H2>
+          <H2>{text.contact}</H2>
         </Grid>
         <Grid container item>
-          <TextField label="E-Mail-Adresse" fullWidth variant="outlined" />
+          <TextField label={text.email} fullWidth variant="outlined" />
         </Grid>
         <Grid container item>
-          <TextField label="Telefonnummer (Optional)" fullWidth variant="outlined" />
+          <TextField label={text.phoneNumber} fullWidth variant="outlined" />
         </Grid>
       </Grid>
     </FormSC>
