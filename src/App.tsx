@@ -1,7 +1,10 @@
 import React, { ReactElement, ReactNode } from 'react';
-import { TenantDetailsPage } from './TenantDetailsPage/TenantDetailsPage';
 import styled from 'styled-components';
 import { Grid } from '@material-ui/core';
+import { Route, Router, Switch } from 'react-router';
+import { createBrowserHistory } from 'history';
+
+import { TenantDetailsPage } from './TenantDetailsPage/TenantDetailsPage';
 
 interface PageContainerProps {
   className?: string;
@@ -16,8 +19,19 @@ const PageContainer = styled((props: PageContainerProps) => (
   margin-bottom: 150px;
 `;
 
+const history = createBrowserHistory();
+
 export const App: React.FC = () => (
-  <PageContainer>
-    <TenantDetailsPage />
-  </PageContainer>
+  <Router history={history}>
+    <Switch>
+      <Route exact path="/rent-list">
+        <PageContainer>aaaa</PageContainer>
+      </Route>
+      <Route exact path="/rent-form">
+        <PageContainer>
+          <TenantDetailsPage />
+        </PageContainer>
+      </Route>
+    </Switch>
+  </Router>
 );
